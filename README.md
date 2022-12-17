@@ -17,6 +17,8 @@ This is a Full Stack MERN Project With user register, login by using jwt, email 
 
 
 # PRD
+## HLD
+
 ## Functional Requirements
 1. signup and login with jwt apis 
 
