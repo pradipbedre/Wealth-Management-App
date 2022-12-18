@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRouter from "./routes/users.js";
-const port = process.env.PORT || 8800;
+const port = process.env.PORT || 3000;
 import cookieParser from "cookie-parser";
 
 const app = express();
