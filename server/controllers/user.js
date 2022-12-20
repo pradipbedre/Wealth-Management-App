@@ -1,4 +1,4 @@
-import User from "../modules/User.js";
+import Wealth from "../modules/Wealth.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
@@ -6,7 +6,7 @@ export const signup = async (req, res) => {
   try {
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(req.body.password, salt);
-    const newUser = new User({ ...req.body, password: hash });
+    const newUser = new Wealth({ ...req.body, password: hash });
 
     const savedUser = await newUser.save();
     res.status(200).json(savedUser);
@@ -17,7 +17,7 @@ export const signup = async (req, res) => {
 
 export const signin = async (req, res) => {
   try {
-    const user = await User.findOne({ name: req.body.name });
+    const user = await Wealth.findOne({ name: req.body.name });
     !user && res.status(404).json("User not found");
     const isCorrectUser = await bcrypt.compare(
       req.body.password,
