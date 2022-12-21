@@ -1,4 +1,7 @@
 import User from "../models/User.js";
+import Asset from "../models/Asset.js";
+import Income from "../models/Income.js";
+import Expense from "../models/Expense.js";
 
 // Update User profile
 export const updateUser = async (req, res) => {
@@ -14,11 +17,16 @@ export const updateUser = async (req, res) => {
 };
 
 // Delete User Account
-export const deleteUser = async (req, res) => {
+export const deleteAccount = async (req, res) => {
+  console.log("hi");
   try {
-    const id = req.params.id;
+    const userId = req.params.id;
+    const id = req.user.id;
     await User.findByIdAndDelete(id);
-    res.status(200).json("Income deleted successfully.");
+    await Asset.deleteMany({ userId });
+    await Expense.deleteMany({ userId });
+    await Income.deleteMany({ userId });
+    res.status(200).json("Assets, Income, Expense and User deleted.");
   } catch (error) {
     console.log(error);
   }
