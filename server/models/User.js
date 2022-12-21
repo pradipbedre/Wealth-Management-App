@@ -14,6 +14,13 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    mobile: {
+      type: Number,
+      unique: true,
+    },
+    ddress: {
+      type: String,
+    },
     type: {
       type: String,
       default: "user",

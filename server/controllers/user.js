@@ -1,43 +1,24 @@
 import User from "../models/User.js";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 
-export const signup = async (req, res) => {
+// Update User profile
+export const updateUser = async (req, res) => {
   try {
-    const salt = bcrypt.genSaltSync(10);
-    const hash = bcrypt.hashSync(req.body.password, salt);
-    const newUser = new User({ ...req.body, password: hash });
-
-    const savedUser = await newUser.save();
-    res.status(200).json(savedUser);
+    const id = req.params.id;
+    const updatedUser = await User.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    res.status(200).json(updatedUser);
   } catch (error) {
     console.log(error);
   }
 };
 
-export const signin = async (req, res) => {
-  //console.log(req);
+// Delete User Account
+export const deleteUser = async (req, res) => {
   try {
-    const user = await User.findOne({ name: req.body.name });
-    !user && res.status(404).json("User not found");
-    const isCorrectUser = await bcrypt.compare(
-      req.body.password,
-      user.password
-    );
-
-    !isCorrectUser && res.status(400).json("Wrong password");
-
-    // creating jwt sign
-    const token = jwt.sign({ id: user._id }, process.env.JWT);
-    const { password, ...others } = user._doc;
-
-    // store in cookie
-    res
-      .cookie("access_token", token, {
-        httpOnly: true,
-      })
-      .status(200)
-      .json(others);
+    const id = req.params.id;
+    await User.findByIdAndDelete(id);
+    res.status(200).json("Income deleted successfully.");
   } catch (error) {
     console.log(error);
   }

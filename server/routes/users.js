@@ -1,17 +1,12 @@
 import express from "express";
-import { signup, signin} from "../controllers/user.js";
+import { updateUser, deleteUser } from "../controllers/user.js";
+import { verifyToken } from "../verifyToken.js";
 const router = express.Router();
 
-// CREATE A USER
-router.post("/signup", signup);
-
-// SIGN IN A USER
-router.post("/signin", signin);
-
-/* // UPDATE A USER
-router.put("/updateprofile", updateUser);
+// UPDATE A USER
+router.put("/updateProfile", verifyToken, updateUser);
 
 // DELETE A USER
-router.delete("/deleteprofile", deleteUser); */
+router.delete("/deleteAccount", verifyToken, deleteUser);
 
 export default router;
