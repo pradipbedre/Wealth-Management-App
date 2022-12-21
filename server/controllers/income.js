@@ -1,4 +1,6 @@
 import Income from "../models/Income.js";
+
+// create income for a user
 export const addIncome = async (req, res) => {
   //console.log(req.user);
   try {
@@ -10,6 +12,7 @@ export const addIncome = async (req, res) => {
   }
 };
 
+// update incomes
 export const updateIncome = async (req, res) => {
   //console.log(req.body)
   try {
@@ -23,6 +26,7 @@ export const updateIncome = async (req, res) => {
   }
 };
 
+// get all incomes
 export const getIncomes = async (req, res) => {
   try {
     const allIncomes = await Income.find();
@@ -32,6 +36,7 @@ export const getIncomes = async (req, res) => {
   }
 };
 
+// delete income
 export const deleteIncome = async (req, res) => {
   try {
     const id = req.params.id;

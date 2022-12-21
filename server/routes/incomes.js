@@ -10,15 +10,15 @@ import { verifyToken } from "../verifyToken.js";
 /* Welcome to income CURD */
 // Create a new income
 
-router.post("/addIncome", verifyToken, addIncome);
+router.post("/add", verifyToken, addIncome);
 
 // update an income
-router.put("/updateIncome/:id", verifyToken, updateIncome);
+router.put("/update/:id", verifyToken, updateIncome);
 
 // Read all incomes
 router.get("/", verifyToken, getIncomes);
 
 // delete an income
-router.delete("/deleteIncome/:id", verifyToken, deleteIncome);
+router.delete("/delete/:id", verifyToken, deleteIncome);
 
 export default router;

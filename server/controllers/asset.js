@@ -1,5 +1,6 @@
 import Asset from "../models/Asset.js";
 
+// create Asset
 export const addAsset = async (req, res) => {
   //console.log(req.user);
   try {
@@ -10,6 +11,8 @@ export const addAsset = async (req, res) => {
     console.log(error);
   }
 };
+
+//Update Asset
 
 export const updateAsset = async (req, res) => {
   //console.log(req.body);
@@ -23,7 +26,7 @@ export const updateAsset = async (req, res) => {
     console.log(error);
   }
 };
-
+// Get All Assets
 export const getAssets = async (req, res) => {
   try {
     const allAssets = await Asset.find();
@@ -33,6 +36,7 @@ export const getAssets = async (req, res) => {
   }
 };
 
+// Delete Asset
 export const deleteAsset = async (req, res) => {
   try {
     const id = req.params.id;
