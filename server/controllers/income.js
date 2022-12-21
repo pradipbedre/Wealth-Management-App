@@ -5,8 +5,8 @@ export const addIncome = async (req, res) => {
   //console.log(req.user);
   try {
     const newIncome = new Income({ userId: req.user.id, ...req.body });
-    const saverdIncome = await newIncome.save();
-    res.status(200).json(saverdIncome);
+    const savedIncome = await newIncome.save();
+    res.status(200).json(savedIncome);
   } catch (error) {
     console.log(error);
   }

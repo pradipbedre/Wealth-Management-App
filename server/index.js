@@ -6,6 +6,7 @@ import userRouter from "./routes/users.js";
 import authRouter from "./routes/auths.js";
 import incomeRouter from "./routes/incomes.js";
 import assetsRouter from "./routes/assets.js";
+import expensesRouter from "./routes/expenses.js";
 const port = process.env.PORT || 3000;
 import cookieParser from "cookie-parser";
 
@@ -34,6 +35,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 app.use("/api/income", incomeRouter);
 app.use("/api/asset", assetsRouter);
+app.use("/api/expense", expensesRouter);
 
 app.listen(port, () => {
   connect();
