@@ -16,10 +16,10 @@ This is a Full Stack MERN Project With user register, login by using jwt, email 
 ![wealth](https://user-images.githubusercontent.com/60803643/208255888-11b15680-1516-4bfa-9620-ea05981f2019.png)
 
 
-# PRD #
-## HLD
+# PRD 
+### HLD
 
-## Functional Requirements
+### Functional Requirements
 1. signup and login with jwt apis 
 
 2. user can store wealth like  Assets , Equity , Fixed Income , Alternatives of logged in user.
@@ -38,12 +38,12 @@ This is a Full Stack MERN Project With user register, login by using jwt, email 
 
 8. send email to logged in user when he/she update the income assets or a add expence
 
-## Non Functional Requirements
+### Non Functional Requirements
 1. App should be work fine in all browsers
 2. should be secure
 
 
-# Wireframe
+# Wireframes
 ## Figma Wireframes Link
 https://www.figma.com/file/ZyZZONgZWRm7PUVSG58vMJ/wealth-management?node-id=0%3A1&t=lzoBM35eM7ARDY9x-1
 
