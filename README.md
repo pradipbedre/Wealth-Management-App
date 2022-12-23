@@ -16,7 +16,7 @@ This is a Full Stack MERN Project With user register, login by using jwt, email 
 ![wealth](https://user-images.githubusercontent.com/60803643/208255888-11b15680-1516-4bfa-9620-ea05981f2019.png)
 
 
-# PRD
+# PRD #
 ## HLD
 
 ## Functional Requirements
@@ -44,7 +44,6 @@ This is a Full Stack MERN Project With user register, login by using jwt, email 
 
 
 # Wireframe
-- Check the ProjectStuff -> wireframe folder for wireframe of this project
 ## Figma Wireframes Link
 https://www.figma.com/file/ZyZZONgZWRm7PUVSG58vMJ/wealth-management?node-id=0%3A1&t=lzoBM35eM7ARDY9x-1
 
