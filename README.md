@@ -45,8 +45,16 @@ This is a Full Stack MERN Project With user register, login by using jwt, email 
 
 # Wireframe
 - Check the ProjectStuff -> wireframe folder for wireframe of this project
+## Figma Wireframes Link
+https://www.figma.com/file/ZyZZONgZWRm7PUVSG58vMJ/wealth-management?node-id=0%3A1&t=lzoBM35eM7ARDY9x-1
+
+## Figma Prototype Link
+https://www.figma.com/proto/ZyZZONgZWRm7PUVSG58vMJ/wealth-management?page-id=0%3A1&node-id=1%3A124&viewport=1873%2C631%2C0.27&scaling=scale-down&starting-point-node-id=1%3A124
+
 
 
 # ERD or DB Design 
 - we are using mongodb as a database so we need to create a database and collection for this project.
-- Json Schema Design Is in DB Design ProjectStuff -> DBDesign Folder Do check it out.
+![wealth-management-db](https://user-images.githubusercontent.com/60803643/209372203-3115d15a-76fe-478e-a133-3adee6ba2d47.jpg)
+
+
