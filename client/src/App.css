@@ -1,83 +1,10 @@
-/* Global Css */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+/* Global CSS For all app */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-
-/* Landing page css */
-.container {
-  margin: 0rem 4rem;
-}
-.container .navbar {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.container .navbar input {
-  display: none;
-}
-.container .navbar .menu {
-  display: none;
-  cursor: pointer;
-}
-.container .navbar .logo {
-  font-size: 2rem;
-  font-weight: 500;
-  color: #28ac7d;
-}
-.container .navbar .nav-link {
-  display: flex;
-}
-.container .navbar .nav-link ul {
-  display: flex;
-  list-style: none;
-}
-.container .navbar .nav-link ul li {
-  margin-top: 4px;
-}
-.container .navbar .nav-link ul li a {
-  text-decoration: none;
-  text-decoration: none;
-  margin: 0px 10px;
-  color: #28ac7d;
-  font-weight: 500;
-}
-.container .navbar .nav-link ul li a:hover {
-  color: #93dac0;
-}
-.container .navbar #signin {
-  background-color: #28ac7d;
-  color: white;
-  padding: 5px 9px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.container .navbar #signin:hover {
-  box-shadow: 0px 1px 1px 1px #93dac0;
-}
-
-@media screen and (max-width: 880px) {
-  .container {
-    margin: 0rem 3rem;
-  }
-  .container .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #28ac7d;
-  }
-  .container .navbar .menu {
-    display: inline-block;
-    color: #28ac7d;
-  }
-  .container .navbar .nav-link {
-    display: none;
-  }
-  .container .navbar .nav-link ul li a {
-    font-size: 0.8rem;
-  }
-}/*# sourceMappingURL=App.css.map */
