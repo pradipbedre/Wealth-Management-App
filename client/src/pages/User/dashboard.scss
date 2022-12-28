@@ -1,0 +1,120 @@
+.dash-container {
+  .dash-navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #28ac7d;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    h2 {
+      color: white;
+    }
+    .dash-profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #999;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      background-color: #28ac7d;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      display: none;
+    }
+    .dropdown-content {
+      background-color: #ddd;
+      padding-left: 5px;
+      border-radius: 0px 5px 5px 5px;
+      button {
+        color: rgb(255, 255, 255);
+        background-color: #28ac7d;
+        border: none;
+        margin-top: 10px;
+        font-size: 10px;
+        padding: 6px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        &:hover {
+          background-color: #20795a;
+        }
+      }
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+  .dash-main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    cursor: pointer;
+    .dash-btn {
+      padding: 20px 30px;
+      width: 200px;
+      height: 70px;
+      background-color: #28ac7d;
+      color: white;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: #20795a;
+      }
+    }
+  }
+  .locker-img {
+    width: 44rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .dash-container {
+    .dash-navbar {
+      h2 {
+        color: white;
+        font-size: 1.3rem;
+      }
+      .dash-profile {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #999;
+      }
+    }
+    .dash-main-section {
+      flex-direction: column;
+      margin-top: 130px;
+      margin-bottom: 20px;
+
+      .dash-btn {
+        width: 200px;
+        height: 70px;
+        background-color: #28ac7d;
+        color: white;
+        font-weight: 700;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: #20795a;
+        }
+      }
+    }
+    .locker-img {
+      display: none;
+    }
+  }
+}
