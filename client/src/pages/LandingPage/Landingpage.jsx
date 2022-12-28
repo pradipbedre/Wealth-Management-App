@@ -26,6 +26,9 @@ const Landingpage = () => {
               <a href="#pricing">Pricing</a>
             </li>
             <li>
+              <a href="#testimonials">Testimonial</a>
+            </li>
+            <li>
               <Link to="/signin">
                 <a className="signin">SignIn </a>
               </Link>
@@ -120,6 +123,45 @@ const Landingpage = () => {
                   <li>accepting multipal payment option</li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </section>
+        <section id="testimonials">
+          <h1>Testimonials</h1>
+          <p>See our users view</p>
+
+          <div className="slide-container">
+            <div className="slide">
+              <h3>Pradip Bedre</h3>
+              <p>
+                " Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Deserunt ratione dolorem totam optio asperiores tempora atque
+                architecto, aperiam facilis qui."
+              </p>
+            </div>
+            <div className="slide">
+              <h3>Pradip Bedre</h3>
+              <p>
+                " Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Deserunt ratione dolorem totam optio asperiores tempora atque
+                architecto, aperiam facilis qui."
+              </p>
+            </div>
+            <div className="slide">
+              <h3>Pradip Bedre</h3>
+              <p>
+                " Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Deserunt ratione dolorem totam optio asperiores tempora atque
+                architecto, aperiam facilis qui."
+              </p>
+            </div>
+            <div className="slide">
+              <h3>Pradip Bedre</h3>
+              <p>
+                "Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Deserunt ratione dolorem totam optio asperiores tempora atque
+                architecto, aperiam facilis qui"
+              </p>
             </div>
           </div>
         </section>

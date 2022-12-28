@@ -1,10 +1,12 @@
 import React from "react";
 import { FcGoogle } from "react-icons/Fc";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+import Dashboard from "../../pages/User/Dashboard";
+import "./signin.scss";
 const Signup = () => {
   return (
     <div>
-      <div className="signup-container">
+      <div className="signin-container">
         <div className="left">
           <img src="../../Assets/signup.png" alt="signup" />
         </div>
@@ -17,12 +19,12 @@ const Signup = () => {
           <form action="">
             <label htmlFor="">Email:</label>
             <input type="text" placeholder="email" />
-            <label htmlFor="">Mobile No:</label>
+            <label htmlFor="">Password:</label>
             <input type="text" placeholder="password" />
-            <button className="signup">Sign In</button>
+            <button className="signin">Sign In</button>
             <button className="google">
               <FcGoogle />
-              signup with google
+              signin with google
             </button>
           </form>
         </div>

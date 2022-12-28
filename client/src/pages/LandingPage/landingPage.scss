@@ -170,6 +170,37 @@
       }
     }
   }
+  #testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    h1 {
+      font-size: 2.5rem;
+    }
+    .slide-container {
+      display: flex;
+      margin-top: 50px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      .slide {
+        border: 1px solid #28ac7d;
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.2s;
+        h3 {
+          color: #28ac7d;
+          margin-bottom: 5px;
+        }
+        &:hover {
+          box-shadow: 0px 5px 20px 1px #28ac7d;
+        }
+      }
+    }
+  }
 }
 #footer {
   margin-top: 100px;
@@ -326,6 +357,19 @@
               text-align: center;
             }
           }
+        }
+      }
+    }
+    #testimonials {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+      .slide-container {
+        flex-direction: column;
+        .slide {
         }
       }
     }
