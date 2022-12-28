@@ -1,12 +1,18 @@
 import React from "react";
 import "./App.css";
-import Landingpage from "./pages/Landingpage";
-import Dashboard from "./pages/User/Dashboard";
+import LandingPage from "./pages/LandingPage/Landingpage";
+import Signup from "./components/Signup/Signup";
+import Signin from "./components/Signin/Signin";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
-      <Dashboard />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+      </Routes>
     </div>
   );
 };

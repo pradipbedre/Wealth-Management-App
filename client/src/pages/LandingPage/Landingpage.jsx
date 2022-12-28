@@ -1,6 +1,8 @@
 import React from "react";
 import { HiMenu } from "react-icons/Hi";
 import "./landingPage.scss";
+import Signup from "../../components/Signup/Signup";
+import { Link, Route } from "react-router-dom";
 const Landingpage = () => {
   return (
     <>
@@ -24,7 +26,9 @@ const Landingpage = () => {
               <a href="#pricing">Pricing</a>
             </li>
             <li>
-              <a className="signin">SignIn </a>
+              <Link to="/signin">
+                <a className="signin">SignIn </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -36,8 +40,13 @@ const Landingpage = () => {
               money, it's about helping
               <br /> our clients build confidence and security for their future
             </p>
-            <button className="hero-signup">SignIn</button>
-            <button className="signup">Register Now</button>
+            <Link to="/signin">
+              <button className="hero-signin">SignIn</button>
+            </Link>
+
+            <Link to="/signup">
+              <button className="signup">Register Now</button>
+            </Link>
           </div>
           <img src="../../Assets/hero.png" alt="Hero" />
         </div>
