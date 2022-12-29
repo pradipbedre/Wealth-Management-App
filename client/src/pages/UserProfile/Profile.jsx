@@ -1,5 +1,6 @@
 import React from "react";
 import "./profile.scss";
+import { Link } from "react-router-dom";
 const Profile = () => {
   return (
     <div>
@@ -13,7 +14,9 @@ const Profile = () => {
               alt="profile-picture"
             />
             <div class="dropdown-content">
-              <button>Logout</button>
+              <Link to="/">
+                <button>Logout</button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { HiMenu } from "react-icons/Hi";
 import "./landingPage.scss";
-import Signup from "../../components/Signup/Signup";
+import Signup from "../Signup/Signup";
 import { Link, Route } from "react-router-dom";
 const Landingpage = () => {
   return (
