@@ -1,1 +1,130 @@
-    
+.profile-container {
+  .profile-navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #28ac7d;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    h2 {
+      color: white;
+    }
+    .dash-profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #999;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      background-color: #28ac7d;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      display: none;
+    }
+    .dropdown-content {
+      background-color: #ddd;
+      padding-left: 5px;
+      border-radius: 0px 5px 5px 5px;
+      button {
+        color: rgb(255, 255, 255);
+        background-color: #28ac7d;
+        border: none;
+        margin-top: 10px;
+        font-size: 10px;
+        padding: 6px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        &:hover {
+          background-color: #20795a;
+        }
+      }
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+  .profile {
+    padding: 50px;
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .profile-img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-color: #999;
+      }
+      .name-file {
+        p {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+        input {
+          padding: 2px;
+          font-size: 20px;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      label {
+        margin-top: 20px;
+      }
+      input {
+        padding: 10px;
+      }
+      textarea {
+        margin-bottom: 20px;
+      }
+      button {
+        background-color: #28ac7d;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        &:hover {
+          background-color: #20795a;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 940px) {
+  .profile {
+    .left {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      .name-file {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+        }
+        input {
+          padding: 2px;
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+      .profile-img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-color: #999;
+      }
+    }
+  }
+}
