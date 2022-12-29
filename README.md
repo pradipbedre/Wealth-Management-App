@@ -1,11 +1,16 @@
 # Access Product: 
 
-# Backend: 
-
-
 # Wealth-Management-App
 This is a Full Stack MERN Project With user register, login by using jwt, email notifications, CURD operations With Standard API, etc.
 
+# Tech Used
+## Frontend
+Deployed on netlify.
+React, Sass or Scss, React Router Dom
+
+## Backend
+Deployed on render.
+Node, express, JWT, bcryptjs, mongoose, mongodb
 
 # Wealth Management App Tasks
 1. Create PRD
