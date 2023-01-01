@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage/Landingpage";
 import Signup from "./pages/Signup/Signup";
 import Signin from "./pages/Signin/Signin";
-import Dashboard from "./pages/User/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Profile from "./pages/UserProfile/Profile";
 import AddAsset from "./pages/AddAsset/AddAsset";
 import AddIncome from "./pages/AddIncome/AddIncome";
