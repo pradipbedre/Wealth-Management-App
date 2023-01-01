@@ -1,6 +1,16 @@
+# Access Product: 
+
 # Wealth-Management-App
 This is a Full Stack MERN Project With user register, login by using jwt, email notifications, CURD operations With Standard API, etc.
 
+# Tech Used
+## Frontend
+Deployed on netlify.
+React, Sass or Scss, React Router Dom
+
+## Backend
+Deployed on render.
+Node, express, JWT, bcryptjs, mongoose, mongodb
 
 # Wealth Management App Tasks
 1. Create PRD
@@ -16,10 +26,10 @@ This is a Full Stack MERN Project With user register, login by using jwt, email 
 ![wealth](https://user-images.githubusercontent.com/60803643/208255888-11b15680-1516-4bfa-9620-ea05981f2019.png)
 
 
-# PRD
-## HLD
+# PRD 
+### HLD
 
-## Functional Requirements
+### Functional Requirements
 1. signup and login with jwt apis 
 
 2. user can store wealth like  Assets , Equity , Fixed Income , Alternatives of logged in user.
@@ -38,15 +48,22 @@ This is a Full Stack MERN Project With user register, login by using jwt, email 
 
 8. send email to logged in user when he/she update the income assets or a add expence
 
-## Non Functional Requirements
+### Non Functional Requirements
 1. App should be work fine in all browsers
 2. should be secure
 
 
-# Wireframe
-- Check the ProjectStuff -> wireframe folder for wireframe of this project
+# Wireframes
+## Figma Wireframes Link
+https://www.figma.com/file/ZyZZONgZWRm7PUVSG58vMJ/wealth-management?node-id=0%3A1&t=lzoBM35eM7ARDY9x-1
+
+## Figma Prototype Link
+https://www.figma.com/proto/ZyZZONgZWRm7PUVSG58vMJ/wealth-management?page-id=0%3A1&node-id=1%3A124&viewport=1873%2C631%2C0.27&scaling=scale-down&starting-point-node-id=1%3A124
+
 
 
 # ERD or DB Design 
 - we are using mongodb as a database so we need to create a database and collection for this project.
-- Json Schema Design Is in DB Design ProjectStuff -> DBDesign Folder Do check it out.
+![wealth-management-db](https://user-images.githubusercontent.com/60803643/209372203-3115d15a-76fe-478e-a133-3adee6ba2d47.jpg)
+
+
