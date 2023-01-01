@@ -3,7 +3,6 @@ import "./signup.scss";
 import { FcGoogle } from "react-icons/Fc";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { useEffect } from "react";
 import axios from "axios";
 const Signup = () => {
   const [email, setEmail] = useState("");

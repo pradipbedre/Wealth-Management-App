@@ -42,6 +42,9 @@
         border: none;
         color: white;
         cursor: pointer;
+        &:hover {
+          background-color: #00ffa6;
+        }
       }
       .google {
         background-color: #6a6b6b;

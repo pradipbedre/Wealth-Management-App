@@ -1,6 +1,5 @@
 import React from "react";
 import "./dashboard.scss";
-import Profile from "../UserProfile/Profile";
 const Dashboard = () => {
   return (
     <div className="dash-container">
