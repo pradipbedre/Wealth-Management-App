@@ -31,29 +31,40 @@ export const signup = async (req, res) => {
 
 // User Login
 export const signin = async (req, res) => {
-  //console.log(req);
-  try {
-    const user = await User.findOne({ email: req.body.email });
-    !user && res.status(404).json("User not found");
-    const isCorrectUser = await bcrypt.compare(
-      req.body.password,
-      user.password
-    );
+  console.log(req.body);
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    res.status(400).json({ errors: errors.array() });
+  } else {
+    try {
+      const user = await User.findOne({ email: req.body.email });
+      !user &&
+        res.status(202).json({
+          Msg: "User Not Found",
+        });
+      const isCorrectUser = await bcrypt.compare(
+        req.body.password,
+        user.password
+      );
 
-    !isCorrectUser && res.status(400).json("Wrong password");
+      !isCorrectUser &&
+        res.status(202).json({
+          Msg: "Wrong Password",
+        });
 
-    // creating jwt sign
-    const token = jwt.sign({ id: user._id }, process.env.JWT);
-    const { password, ...others } = user._doc;
+      // creating jwt sign
+      const token = jwt.sign({ id: user._id }, process.env.JWT);
+      const { password, ...others } = user._doc;
 
-    // store in cookie
-    res
-      .cookie("access_token", token, {
-        httpOnly: true,
-      })
-      .status(200)
-      .json(others);
-  } catch (error) {
-    console.log(error);
+      // store in cookie
+      res
+        .cookie("access_token", token, {
+          httpOnly: true,
+        })
+        .status(200)
+        .json(others);
+    } catch (error) {
+      console.log(error);
+    }
   }
 };

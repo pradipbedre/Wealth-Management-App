@@ -13,7 +13,12 @@ router.post(
 );
 
 // SIGN IN A USER
-router.post("/signin", signin);
+router.post(
+  "/signin",
+  body("email").isEmail(),
+  body("password").isLength({ min: 4 }),
+  signin
+);
 
 // Signup with google
 
