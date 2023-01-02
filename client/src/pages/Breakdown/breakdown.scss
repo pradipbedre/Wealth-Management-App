@@ -1,0 +1,113 @@
+.addBreakdownContainer {
+  .navbar {
+    background-color: #28ac7d;
+    padding: 20px;
+    height: 60px;
+    display: flex;
+    gap: 24rem;
+    align-items: center;
+    color: white;
+    .dashboard {
+      padding: 5px 10px;
+      border: 2px white solid;
+      background-color: #28ac7d;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        background-color: #18664b;
+      }
+    }
+  }
+  .inputForm {
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    input {
+      width: 250px;
+    }
+    input,
+    select {
+      padding: 5px;
+      border-radius: 5px;
+    }
+    button {
+      padding: 7px 20px;
+      background-color: #28ac7d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      &:hover {
+        background-color: #18664b;
+      }
+    }
+  }
+
+  .tableData {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    table {
+      table-layout: fixed;
+      border-spacing: 0;
+    }
+    tr {
+      background-color: #28ac7d;
+      color: white;
+      th,
+      td {
+        padding: 15px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: left;
+      }
+    }
+    tr:nth-child(even) {
+      background-color: #37745d;
+    }
+    .content {
+      background-color: #2b5445;
+    }
+  }
+  .result {
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    box-shadow: 1px 4px 19px 1px #1a654b;
+    text-align: center;
+    h3 {
+      color: #28ac7d;
+    }
+    h4 {
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .addBreakdownContainer {
+    .navbar {
+      gap: 10rem;
+    }
+    .tableData {
+      flex-direction: column;
+    }
+    .inputForm {
+      flex-direction: column;
+    }
+  }
+}
