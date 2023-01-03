@@ -1,15 +1,18 @@
 import React from "react";
 import { FcGoogle } from "react-icons/Fc";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import { useSelector, useDispatch } from "react-redux";
+import { Login } from "../../redux/actions/Auth";
 import "./signin.scss";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const loginState = useSelector((state) => state.checkAuth);
 
   const loginUser = async (e) => {
     e.preventDefault();
@@ -25,8 +28,9 @@ const Signup = () => {
         if (res.data.Msg) {
           alert(`${res.data.Msg}`);
         }
-        if (res.status === 200) {
-          navigate("/dashboard");
+        if (res.status === 200 && res.data.Auth) {
+          dispatch(notValidUser());
+          console.log("After:", loginState);
         }
       } catch (error) {
         //console.log(error.response.data.errors[0].param);
