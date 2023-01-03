@@ -67,3 +67,20 @@ https://www.figma.com/proto/ZyZZONgZWRm7PUVSG58vMJ/wealth-management?page-id=0%3
 ![wealth-management-db](https://user-images.githubusercontent.com/60803643/209372203-3115d15a-76fe-478e-a133-3adee6ba2d47.jpg)
 
 
+# Helpfull Resources I follwed while creating this project
+1. Implement Authentication and Protect Routes in React: 
+https://levelup.gitconnected.com/implement-authentication-and-protect-routes-in-react-135a60b1e16f
+
+https://www.youtube.com/watch?v=2k8NleFjG7I
+
+2. Authentication With JWT Tutorial
+https://www.youtube.com/watch?v=KgXT63wPMPc
+
+3. Email, password .etc, validation at backend side using express-validator
+https://express-validator.github.io/docs/
+
+4. React Redux Tutorial
+https://codecrunch.org/redux-from-scratch-implementation-205c5b3be018
+
+https://www.freecodecamp.org/news/how-to-use-redux-in-reactjs-with-real-life-examples-687ab4441b85/
+

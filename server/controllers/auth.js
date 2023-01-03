@@ -31,7 +31,7 @@ export const signup = async (req, res) => {
 
 // User Login
 export const signin = async (req, res) => {
-  console.log(req.body);
+  //console.log(req.body);
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     res.status(400).json({ errors: errors.array() });
@@ -53,7 +53,9 @@ export const signin = async (req, res) => {
         });
 
       // creating jwt sign
-      const token = jwt.sign({ id: user._id }, process.env.JWT);
+      const token = jwt.sign({ id: user._id }, process.env.JWT, {
+        expiresIn: "2m",
+      });
       const { password, ...others } = user._doc;
 
       // store in cookie
@@ -62,7 +64,7 @@ export const signin = async (req, res) => {
           httpOnly: true,
         })
         .status(200)
-        .json(others);
+        .json({ Auth: "true", ...others });
     } catch (error) {
       console.log(error);
     }
