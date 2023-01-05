@@ -64,6 +64,14 @@
         word-wrap: break-word;
         overflow-wrap: break-word;
         text-align: left;
+        button {
+          padding: 5px 10px;
+          background-color: #25816e;
+          border: none;
+          cursor: pointer;
+          box-shadow: 0.3px 0.3px 15px 1px;
+          border-radius: 5px;
+        }
       }
     }
     tr:nth-child(even) {

@@ -1,10 +1,10 @@
 import React from "react";
 import { FcGoogle } from "react-icons/Fc";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { setCookie, getCookie } from "../../utils/Cookie";
+import { setCookie } from "../../utils/Cookie";
 import "./signin.scss";
 const Signup = () => {
   /* Defile States */
@@ -23,7 +23,7 @@ const Signup = () => {
           email,
           password,
         });
-        console.log(res);
+        //console.log(res);
         if (res.data.Msg) {
           alert(`${res.data.Msg}`);
         }

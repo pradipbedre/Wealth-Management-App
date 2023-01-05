@@ -13,9 +13,6 @@ const expenseSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    billFile: {
-      type: String,
-    },
   },
 
   { timestamps: true }

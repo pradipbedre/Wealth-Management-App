@@ -35,6 +35,7 @@ const Breakdown = () => {
           </tr>
         </table>
         <table width="400" height="250">
+        
           <tr className="header">
             <th>Income Source</th>
             <th>Amount</th>
