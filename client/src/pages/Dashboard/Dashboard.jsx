@@ -1,7 +1,13 @@
 import React from "react";
 import "./dashboard.scss";
 import { Link } from "react-router-dom";
+import { removeCookie } from "../../utils/Cookie";
+
 const Dashboard = () => {
+  const logoutUser = () => {
+    removeCookie("jwt_token");
+  };
+
   return (
     <div className="dash-container">
       <div className="dash-navbar">
@@ -18,7 +24,7 @@ const Dashboard = () => {
             </Link>
 
             <Link to="/">
-              <button>Logout</button>
+              <button onClick={logoutUser}>Logout</button>
             </Link>
           </div>
         </div>

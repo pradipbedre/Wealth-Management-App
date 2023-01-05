@@ -4,16 +4,15 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { Login } from "../../redux/actions/Auth";
+import { setCookie, getCookie } from "../../utils/Cookie";
 import "./signin.scss";
 const Signup = () => {
+  /* Defile States */
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const loginState = useSelector((state) => state.checkAuth);
 
+  /* All Functions  */
   const loginUser = async (e) => {
     e.preventDefault();
     if (email === "" || password === "") {
@@ -29,8 +28,8 @@ const Signup = () => {
           alert(`${res.data.Msg}`);
         }
         if (res.status === 200 && res.data.Auth) {
-          dispatch(notValidUser());
-          console.log("After:", loginState);
+          setCookie("jwt_token", res.data.token);
+          navigate("/dashboard");
         }
       } catch (error) {
         //console.log(error.response.data.errors[0].param);

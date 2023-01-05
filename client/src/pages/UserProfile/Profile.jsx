@@ -1,7 +1,14 @@
 import React from "react";
 import "./profile.scss";
 import { Link } from "react-router-dom";
+import { removeCookie } from "../../utils/Cookie";
+
 const Profile = () => {
+  const dispatch = useDispatch();
+  const logoutState = useSelector((state) => state.Auth);
+  const logoutUser = () => {
+    removeCookie("jwt_token");
+  };
   return (
     <div>
       <div className="profile-container">
@@ -14,11 +21,11 @@ const Profile = () => {
               alt="profile-picture"
             />
             <div class="dropdown-content">
-              <Link to="/">
-                <button>Logout</button>
-              </Link>
               <Link to="/dashboard">
                 <button>Dashboard</button>
+              </Link>
+              <Link to="/">
+                <button onClick={logoutUser}>Logout</button>
               </Link>
             </div>
           </div>

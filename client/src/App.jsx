@@ -10,20 +10,23 @@ import AddAsset from "./pages/AddAsset/AddAsset";
 import AddIncome from "./pages/AddIncome/AddIncome";
 import AddExpense from "./pages/AddExpense/AddExpense";
 import Breakdown from "./pages/Breakdown/Breakdown";
+import PivateRoutes from "./utils/ProtectedRoutes";
 
 const App = () => {
   return (
     <div>
       <Routes>
+        <Route element={<PivateRoutes />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/profile" element={<Profile />} />
+          <Route path="/dashboard/addAsset" element={<AddAsset />} />
+          <Route path="/dashboard/addIncome" element={<AddIncome />} />
+          <Route path="/dashboard/addExpense" element={<AddExpense />} />
+          <Route path="/dashboard/breakdown" element={<Breakdown />} />
+        </Route>
         <Route index element={<LandingPage />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signin" element={<Signin />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/dashboard/profile" element={<Profile />} />
-        <Route path="/dashboard/addAsset" element={<AddAsset />} />
-        <Route path="/dashboard/addIncome" element={<AddIncome />} />
-        <Route path="/dashboard/addExpense" element={<AddExpense />} />
-        <Route path="/dashboard/breakdown" element={<Breakdown />} />
       </Routes>
     </div>
   );

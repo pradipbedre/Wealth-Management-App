@@ -54,7 +54,7 @@ export const signin = async (req, res) => {
 
       // creating jwt sign
       const token = jwt.sign({ id: user._id }, process.env.JWT, {
-        expiresIn: "2m",
+        expiresIn: "1m",
       });
       const { password, ...others } = user._doc;
 
@@ -64,7 +64,7 @@ export const signin = async (req, res) => {
           httpOnly: true,
         })
         .status(200)
-        .json({ Auth: "true", ...others });
+        .json({ Auth: true, token, ...others });
     } catch (error) {
       console.log(error);
     }

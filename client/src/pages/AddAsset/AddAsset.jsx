@@ -1,7 +1,28 @@
 import React from "react";
 import "./addassets.scss";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { removeCookie } from "../../utils/Cookie";
+
 const AddAsset = () => {
+  const [asset, setAsset] = useState("");
+
+  useEffect(() => {
+    const fetchAssets = async () => {
+      try {
+        const res = await axios.get("/api/asset");
+        setAsset(res.data);
+        console.log(asset);
+      } catch (error) {
+        if (!error.response.data.Auth) {
+          removeCookie("jwt_token");
+        }
+      }
+    };
+    fetchAssets();
+  }, []);
+
   return (
     <div className="addAssetsContainer">
       <div className="navbar">
@@ -25,38 +46,27 @@ const AddAsset = () => {
         </select>
         <button type="submit">Add</button>
       </form>
-      <div className="tableData" style={{ overflowX: "scroll" }} >
-        <table width="1000" height="250" >
-          <tr className="header">
-            <th>Asset</th>
-            <th>Total Value</th>
-            <th>Additional Details</th>
-            <th>Unit</th>
-          </tr>
-          <tr className="content">
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-          </tr>
-          <tr className="content">
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-          </tr>
-          <tr className="content">
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-          </tr>
-          <tr className="content">
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-            <td>Ramesh Raman</td>
-          </tr>
+      <div className="tableData" style={{ overflowX: "scroll" }}>
+        <table width="1000" height="250">
+          <thead>
+            <tr className="header">
+              <th>Asset</th>
+              <th>Total Value</th>
+              <th>Additional Details</th>
+              <th>Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {asset &&
+              asset.map((ass) => (
+                <tr className="content" key={ass._id}>
+                  <td>{ass.assetName}</td>
+                  <td>{ass.assetValue}</td>
+                  <td>{ass.additionalDetails}</td>
+                  <td>{ass.unit}</td>
+                </tr>
+              ))}
+          </tbody>
         </table>
       </div>
     </div>

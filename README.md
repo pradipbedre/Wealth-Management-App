@@ -84,3 +84,6 @@ https://codecrunch.org/redux-from-scratch-implementation-205c5b3be018
 
 https://www.freecodecamp.org/news/how-to-use-redux-in-reactjs-with-real-life-examples-687ab4441b85/
 
+5. React api call traverse data
+https://www.pluralsight.com/guides/iterate-through-a-json-response-in-jsx-render-for-reactjs
+
