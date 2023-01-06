@@ -27,8 +27,6 @@ Node, express, JWT, bcryptjs, mongoose, mongodb
 
 
 # PRD 
-### HLD
-
 ### Functional Requirements
 1. signup and login with jwt apis 
 
