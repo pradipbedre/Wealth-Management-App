@@ -2,6 +2,7 @@ import React from "react";
 import "./dashboard.scss";
 import { Link } from "react-router-dom";
 import { removeCookie } from "../../utils/Cookie";
+import dashboard from "../../Assets/user-dash.png";
 
 const Dashboard = () => {
   const logoutUser = () => {
@@ -43,7 +44,7 @@ const Dashboard = () => {
           <button className="dash-btn">Income Expense Breakdown</button>
         </Link>
       </div>
-      <img className="locker-img" src="../../../Assets/user-dash.png" alt="" />
+      <img className="locker-img" src={dashboard} alt="" />
     </div>
   );
 };

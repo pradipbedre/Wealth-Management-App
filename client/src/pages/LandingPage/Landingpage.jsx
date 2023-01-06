@@ -1,7 +1,12 @@
 import React from "react";
 import { HiMenu } from "react-icons/Hi";
 import "./landingPage.scss";
-import Signup from "../Signup/Signup";
+import hero from "../../Assets/hero.png";
+import whywe from "../../Assets/whywe.png";
+import singleUser from "../../Assets/single.png";
+import multipalUser from "../../Assets/multipal.png";
+import extraMultipalUser from "../../Assets/extramul.png";
+
 import { Link, Route } from "react-router-dom";
 const Landingpage = () => {
   return (
@@ -51,7 +56,7 @@ const Landingpage = () => {
               <button className="signup">Register Now</button>
             </Link>
           </div>
-          <img src="../../Assets/hero.png" alt="Hero" />
+          <img src={hero} alt="Hero" />
         </div>
         <section id="whywe">
           <div className="rightSide">
@@ -76,7 +81,7 @@ const Landingpage = () => {
             </ul>
           </div>
           <div className="leftSide">
-            <img src="../../Assets/whywe.png" alt="whywe" />
+            <img src={whywe} alt="whywe" />
           </div>
         </section>
         <section id="pricing">
@@ -87,7 +92,7 @@ const Landingpage = () => {
           <div className="plans">
             <div className="hoverplan">
               <div className="plan">
-                <img src="../../Assets/single.png" alt="" />
+                <img src={singleUser} alt="" />
                 <p className="text1">PLUS</p>
                 <p className="text2">For individual</p>
                 <p className="text3">Free</p>
@@ -100,7 +105,7 @@ const Landingpage = () => {
             </div>
             <div className="hoverplan">
               <div className="plan">
-                <img src="../../Assets/multipal.png" alt="" />
+                <img src={multipalUser} alt="" />
                 <p className="text1">PREMIUM</p>
                 <p className="text2">For 10 People</p>
                 <p className="text3">30$</p>
@@ -113,7 +118,7 @@ const Landingpage = () => {
             </div>
             <div className="hoverplan">
               <div className="plan">
-                <img src="../../Assets/extramul.png" alt="" />
+                <img src={extraMultipalUser} alt="" />
                 <p className="text1">TEAM</p>
                 <p className="text2">For individual</p>
                 <p className="text3">Custom pricing</p>

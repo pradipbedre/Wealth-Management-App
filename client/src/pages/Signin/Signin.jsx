@@ -6,6 +6,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { setCookie } from "../../utils/Cookie";
 import "./signin.scss";
+import welcome from "../../Assets/welcome.png";
+
 const Signup = () => {
   /* Defile States */
   const [email, setEmail] = useState("");
@@ -43,7 +45,7 @@ const Signup = () => {
     <div>
       <div className="signin-container">
         <div className="left">
-          <img src="../../Assets/signup.png" alt="signup" />
+          <img src={welcome} alt="signup" />
         </div>
         <div className="right">
           <h2>Login</h2>

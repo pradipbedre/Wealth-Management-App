@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/Fc";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import welcome from "../../Assets/welcome.png";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
@@ -46,7 +47,7 @@ const Signup = () => {
     <div>
       <div className="signup-container">
         <div className="left">
-          <img src="../../Assets/signup.png" alt="signup" />
+          <img src={welcome} alt="signup" />
         </div>
         <div className="right">
           <h2>Register Now</h2>
