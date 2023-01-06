@@ -26,14 +26,11 @@ const Profile = () => {
   console.log("sssssssssss", user._id);
   const updateProfile = async () => {
     try {
-      const res = await axios.put(
-        `/api/user/updateProfile/63b7c0310bdd90dbd0372af2`,
-        {
-          name,
-          mobile,
-          address,
-        }
-      );
+      const res = await axios.put(`/api/user/updateProfile/${user._id}`, {
+        name,
+        mobile,
+        address,
+      });
       console.log("profile updated", res);
     } catch (error) {
       invalidToken(error.response.data.Auth);
@@ -51,7 +48,7 @@ const Profile = () => {
           <div className="dropdown">
             <img
               className="dash-profile"
-              src="https://avatars.githubusercontent.com/u/60803643?s=40&v=4"
+              src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?b=1&s=612x612&w=0&k=20&c=zdMrnElXIALTyT35otBWBGYH23t0zYiwwsg-6rjwnU4="
               alt="profile-picture"
             />
             <div class="dropdown-content">

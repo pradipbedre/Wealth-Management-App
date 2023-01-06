@@ -46,7 +46,7 @@ const Signup = () => {
           <img src="../../Assets/signup.png" alt="signup" />
         </div>
         <div className="right">
-          <h2>Register Now</h2>
+          <h2>Login</h2>
           <p>
             or,
             <Link to="/signup"> create a account</Link>

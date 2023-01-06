@@ -21,7 +21,7 @@ const AddExpense = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [expense]);
 
   /* Delete Income */
   const deleteExpense = async (e, id) => {

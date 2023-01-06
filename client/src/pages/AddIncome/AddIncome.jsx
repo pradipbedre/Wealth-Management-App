@@ -21,7 +21,7 @@ const AddIncome = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [income]);
 
   /* Delete Income */
   const deleteIncome = async (e, id) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./signup.scss";
 import { FcGoogle } from "react-icons/Fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 const Signup = () => {
@@ -9,6 +9,7 @@ const Signup = () => {
   const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const navigate = useNavigate();
 
   const registerUser = async (e) => {
     e.preventDefault();
@@ -26,6 +27,7 @@ const Signup = () => {
           alert("This email is already register, sign up with another email.");
         } else if (res.status === 200) {
           alert("Your Registration Successfully Compleated.");
+          navigate("/signin");
           setEmail("");
           setMobile("");
           setName("");

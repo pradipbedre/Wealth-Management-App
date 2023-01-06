@@ -5,14 +5,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import invalidToken from "../../utils/InvalidToken";
 
-
 const AddAsset = () => {
   const [asset, setAsset] = useState([]);
   const [assetName, setAssetName] = useState("");
   const [assetValue, setAssetValue] = useState("");
   const [assetDetails, setAssetDetails] = useState("");
   const [assetUnite, setAssetUnite] = useState("");
-
 
   useEffect(() => {
     const fetchAssets = async () => {
@@ -24,7 +22,7 @@ const AddAsset = () => {
       }
     };
     fetchAssets();
-  }, []);
+  }, [asset]);
 
   /* Creating New Asset */
   const submitAsset = async (e) => {

@@ -29,7 +29,8 @@ export const updateIncome = async (req, res) => {
 // get all incomes
 export const getIncomes = async (req, res) => {
   try {
-    const allIncomes = await Income.find();
+    const userId = req.user.id;
+    const allIncomes = await Income.find({ userId });
     res.status(200).json(allIncomes);
   } catch (error) {
     console.log(error);

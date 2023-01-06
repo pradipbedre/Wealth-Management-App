@@ -29,7 +29,8 @@ export const updateExpense = async (req, res) => {
 // get all Expenses
 export const getExpenses = async (req, res) => {
   try {
-    const allExpenses = await Expense.find();
+    const userId = req.user.id;
+    const allExpenses = await Expense.find({ userId });
     res.status(200).json(allExpenses);
   } catch (error) {
     console.log(error);

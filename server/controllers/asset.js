@@ -29,7 +29,8 @@ export const updateAsset = async (req, res) => {
 // Get All Assets
 export const getAssets = async (req, res) => {
   try {
-    const allAssets = await Asset.find();
+    const userId = req.user.id;
+    const allAssets = await Asset.find({ userId });
     res.status(200).json(allAssets);
   } catch (error) {
     console.log(error);
