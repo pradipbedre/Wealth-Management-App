@@ -52,14 +52,15 @@
     padding: 50px;
     .left {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      gap: 20px;
-      .profile-img {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        background-color: #999;
+      h2 {
+        color: #28ac7d;
+        text-decoration: underline;
       }
+      gap: 20px;
+
       .name-file {
         p {
           font-size: 3rem;

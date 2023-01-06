@@ -16,6 +16,16 @@ export const updateUser = async (req, res) => {
   }
 };
 
+export const getUserDetails = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const user = await User.findById(userId);
+    res.status(200).json(user);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 // Delete User Account
 export const deleteAccount = async (req, res) => {
   console.log("hi");

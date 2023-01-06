@@ -1,11 +1,45 @@
 import React from "react";
 import "./profile.scss";
 import { Link } from "react-router-dom";
-import { removeCookie } from "../../utils/Cookie";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import invalidToken from "../../utils/InvalidToken";
 
 const Profile = () => {
-  const dispatch = useDispatch();
-  const logoutState = useSelector((state) => state.Auth);
+  const [user, setUser] = useState("");
+  const [name, setName] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [address, setAddress] = useState("");
+
+  useEffect(() => {
+    const fetchAssets = async () => {
+      try {
+        const res = await axios.get("/api/user/userInfo");
+
+        setUser(res.data);
+      } catch (error) {
+        invalidToken(error.response.data.Auth);
+      }
+    };
+    fetchAssets();
+  }, []);
+  console.log("sssssssssss", user._id);
+  const updateProfile = async () => {
+    try {
+      const res = await axios.put(
+        `/api/user/updateProfile/63b7c0310bdd90dbd0372af2`,
+        {
+          name,
+          mobile,
+          address,
+        }
+      );
+      console.log("profile updated", res);
+    } catch (error) {
+      invalidToken(error.response.data.Auth);
+    }
+  };
+
   const logoutUser = () => {
     removeCookie("jwt_token");
   };
@@ -32,6 +66,14 @@ const Profile = () => {
         </div>
         <div className="profile">
           <div className="left">
+            <h2>Profile Information </h2>
+            <h3>Name:- {user.name}</h3>
+            <h3>Email:- {user.email}</h3>
+            <h3>Mobile No:- {user.mobile}</h3>
+            <h3>Address:- {user.address}</h3>
+          </div>
+
+          {/*   <div className="left">
             <img
               className="profile-img"
               src="https://avatars.githubusercontent.com/u/60803643?s=40&v=4"
@@ -41,19 +83,33 @@ const Profile = () => {
               <p>Pradip Bedre</p>
               <input type="file" />
             </div>
-          </div>
+          </div> */}
           <div className="right">
             <label htmlFor="">Name:</label>
-            <input type="text" placeholder="name" />
-            <label htmlFor="">Email:</label>
-            <input type="text" placeholder="email" />
-            <label htmlFor="">Password:</label>
-            <input type="text" placeholder="password" />
+            <input
+              type="text"
+              placeholder="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+
             <label htmlFor="">Mobile No:</label>
-            <input type="text" placeholder="mobile no" />
+            <input
+              type="text"
+              placeholder="mobile no"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+            />
             <label htmlFor="">Address:</label>
-            <textarea rows="5" cols="60" name="text" placeholder="Address" />
-            <button>Save</button>
+            <textarea
+              rows="5"
+              cols="60"
+              name="text"
+              placeholder="Address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+            <button onClick={updateProfile}>Update Profile</button>
           </div>
         </div>
       </div>

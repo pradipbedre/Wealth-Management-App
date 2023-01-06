@@ -89,10 +89,10 @@ const Signup = () => {
             <button className="signup" type="submit" onClick={registerUser}>
               Sign Up
             </button>
-            <button className="google">
+            {/* <button className="google">
               <FcGoogle />
               signup with google
-            </button>
+            </button> */}
           </form>
         </div>
       </div>
