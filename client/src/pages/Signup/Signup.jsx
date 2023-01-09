@@ -18,15 +18,12 @@ const Signup = () => {
       alert("please enter valid details!");
     } else {
       try {
-        const res = await axios.post(
-          "https://wealth.up.railway.app/api/auth/signup",
-          {
-            name,
-            email,
-            password,
-            mobile,
-          }
-        );
+        const res = await axios.post("/api/auth/signup", {
+          name,
+          email,
+          password,
+          mobile,
+        });
         if (res.data.user) {
           alert("This email is already register, sign up with another email.");
         } else if (res.status === 200) {

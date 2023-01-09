@@ -14,9 +14,7 @@ const AddExpense = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(
-          "https://wealth.up.railway.app/api/expense"
-        );
+        const res = await axios.get("/api/expense");
         setExpense(res.data);
       } catch (error) {
         invalidToken(error.response.data.Auth);
@@ -28,9 +26,7 @@ const AddExpense = () => {
   /* Delete Income */
   const deleteExpense = async (e, id) => {
     try {
-      const res = await axios.delete(
-        `https://wealth.up.railway.app/api/expense/delete/${id}`
-      );
+      const res = await axios.delete(`/api/expense/delete/${id}`);
       console.log(res);
     } catch (error) {
       console.log(error);
@@ -42,13 +38,10 @@ const AddExpense = () => {
   const submitExpense = async (e) => {
     //e.preventDefault();
     try {
-      const res = await axios.post(
-        "https://wealth.up.railway.app/api/expense/add",
-        {
-          expenseName,
-          expenseAmount,
-        }
-      );
+      const res = await axios.post("/api/expense/add", {
+        expenseName,
+        expenseAmount,
+      });
     } catch (error) {
       invalidToken(error.response.data.Auth);
     }

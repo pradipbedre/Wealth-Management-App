@@ -16,12 +16,8 @@ const Breakdown = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const resIncome = await axios.get(
-          "https://wealth.up.railway.app/api/income"
-        );
-        const resExpense = await axios.get(
-          "https://wealth.up.railway.app/api/expense"
-        );
+        const resIncome = await axios.get("/api/income");
+        const resExpense = await axios.get("/api/expense");
         setBreakI(resIncome.data);
         setBreakE(resExpense.data);
 
@@ -37,6 +33,7 @@ const Breakdown = () => {
           totalExpenseCalc += e.expenseAmount;
         });
         setTotalExpense(totalExpenseCalc);
+
       } catch (error) {
         invalidToken(error.response.data.Auth);
       }
@@ -52,7 +49,7 @@ const Breakdown = () => {
         </Link>
         <h2>Income Expense Breakdown</h2>
       </div>
-      {/*  <form className="inputForm">
+     {/*  <form className="inputForm">
         <input
           type="date"
           placeholder="start date"

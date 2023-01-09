@@ -15,7 +15,7 @@ const AddAsset = () => {
   useEffect(() => {
     const fetchAssets = async () => {
       try {
-        const res = await axios.get("https://wealth.up.railway.app/api/asset");
+        const res = await axios.get("/api/asset");
         setAsset(res.data);
       } catch (error) {
         invalidToken(error.response.data.Auth);
@@ -28,15 +28,12 @@ const AddAsset = () => {
   const submitAsset = async (e) => {
     //e.preventDefault();
     try {
-      const res = await axios.post(
-        "https://wealth.up.railway.app/api/asset/add",
-        {
-          assetName,
-          assetValue,
-          additionalDetails: `${assetDetails}`,
-          unit: `${assetUnite}`,
-        }
-      );
+      const res = await axios.post("/api/asset/add", {
+        assetName,
+        assetValue,
+        additionalDetails: `${assetDetails}`,
+        unit: `${assetUnite}`,
+      });
     } catch (error) {
       invalidToken(error.response.data.Auth);
     }
@@ -45,9 +42,7 @@ const AddAsset = () => {
   /* Delete Aasset */
   const deleteAsset = async (e, id) => {
     try {
-      const res = await axios.delete(
-        `https://wealth.up.railway.app/api/asset/delete/${id}`
-      );
+      const res = await axios.delete(`/api/asset/delete/${id}`);
     } catch (error) {
       invalidToken(error.response.data.Auth);
     }
