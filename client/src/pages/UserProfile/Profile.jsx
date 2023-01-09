@@ -14,7 +14,9 @@ const Profile = () => {
   useEffect(() => {
     const fetchAssets = async () => {
       try {
-        const res = await axios.get("/api/user/userInfo");
+        const res = await axios.get(
+          "https://wealth.up.railway.app/api/user/userInfo"
+        );
 
         setUser(res.data);
       } catch (error) {
@@ -26,11 +28,14 @@ const Profile = () => {
   console.log("sssssssssss", user._id);
   const updateProfile = async () => {
     try {
-      const res = await axios.put(`/api/user/updateProfile/${user._id}`, {
-        name,
-        mobile,
-        address,
-      });
+      const res = await axios.put(
+        `https://wealth.up.railway.app/api/user/updateProfile/${user._id}`,
+        {
+          name,
+          mobile,
+          address,
+        }
+      );
       console.log("profile updated", res);
     } catch (error) {
       invalidToken(error.response.data.Auth);

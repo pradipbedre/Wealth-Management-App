@@ -21,11 +21,14 @@ const Signup = () => {
       alert("please enter valid details!");
     } else {
       try {
-        const res = await axios.post("/api/auth/signin", {
-          email,
-          password,
-        });
-        //console.log(res);
+        const res = await axios.post(
+          "https://wealth.up.railway.app/api/auth/signin",
+          {
+            email,
+            password,
+          }
+        );
+        console.log(res);
         if (res.data.Msg) {
           alert(`${res.data.Msg}`);
         }
