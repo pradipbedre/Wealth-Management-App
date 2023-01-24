@@ -5,9 +5,13 @@
 # Wealth-Management-App
 This is a Full Stack MERN Project With user register, login by using jwt, email notifications, CURD operations With Standard API, etc.
 
-# Demo Account Credentials or you can try with new account
+# Demo Account Credentials 
 - Email: demo@gmail.com
 - Password: Demo@9090
+
+# WorkFlow
+![cI3ovFGG1F](https://user-images.githubusercontent.com/60803643/214389853-fea9a14c-b506-4cb8-84d2-09f2e7cb8acf.gif)
+
 
 # Tech Used
 ## Frontend
