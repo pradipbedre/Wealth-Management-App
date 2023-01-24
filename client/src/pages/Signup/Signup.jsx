@@ -1,10 +1,10 @@
 import React from "react";
 import "./signup.scss";
-import { FcGoogle } from "react-icons/Fc";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import welcome from "../../Assets/welcome.png";
+import { Input } from "antd";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
@@ -50,7 +50,7 @@ const Signup = () => {
           <img src={welcome} alt="signup" />
         </div>
         <div className="right">
-          <h2>Register Now</h2>
+          <h1>Register Now</h1>
           <p>
             or,
             <Link to="/signin"> Login to account</Link>
@@ -74,12 +74,9 @@ const Signup = () => {
               required
             />
             <label htmlFor="">Password:*</label>
-            <input
-              type="text"
-              placeholder="password"
+            <Input.Password
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
             />
             <label htmlFor="">Enter Name:*</label>
             <input
@@ -92,10 +89,6 @@ const Signup = () => {
             <button className="signup" type="submit" onClick={registerUser}>
               Sign Up
             </button>
-            {/* <button className="google">
-              <FcGoogle />
-              signup with google
-            </button> */}
           </form>
         </div>
       </div>

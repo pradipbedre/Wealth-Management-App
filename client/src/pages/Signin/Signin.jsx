@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { setCookie } from "../../utils/Cookie";
 import "./signin.scss";
 import welcome from "../../Assets/welcome.png";
+import { Input } from "antd";
 
 const Signup = () => {
   /* Defile States */
@@ -42,43 +43,34 @@ const Signup = () => {
     }
   };
   return (
-    <div>
-      <div className="signin-container">
-        <div className="left">
-          <img src={welcome} alt="signup" />
-        </div>
-        <div className="right">
-          <h2>Login</h2>
-          <p>
-            or,
-            <Link to="/signup"> create a account</Link>
-          </p>
-          <form action="">
-            <label htmlFor="">Email:*</label>
-            <input
-              type="email"
-              placeholder="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <label htmlFor="">Password:*</label>
-            <input
-              type="text"
-              placeholder="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <button className="signin" type="submit" onClick={loginUser}>
-              Sign In
-            </button>
-            {/*  <button className="google">
-              <FcGoogle />
-              signin with google
-            </button> */}
-          </form>
-        </div>
+    <div className="signin-container">
+      <div className="left">
+        <img src={welcome} alt="signup" />
+      </div>
+      <div className="right">
+        <h1>Login</h1>
+        <p style={{ fontSize: "14px" }}>
+          or,
+          <Link to="/signup"> create a account</Link>
+        </p>
+        <form>
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <label htmlFor="">Password</label>
+          <Input.Password
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button className="signin" type="submit" onClick={loginUser}>
+            Sign In
+          </button>
+        </form>
       </div>
     </div>
   );

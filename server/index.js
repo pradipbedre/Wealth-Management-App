@@ -28,7 +28,7 @@ const connect = () => {
     });
 };
 app.get("/", (req, res) => {
-  res.send(`you are live on ${port}`);
+  return res.send(`you are live on ${port}`);
 });
 
 app.use("/api/auth", authRouter);
