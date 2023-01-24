@@ -9,7 +9,7 @@ This is a Full Stack MERN Project With user register, login by using jwt, email 
 - Email: demo@gmail.com
 - Password: Demo@9090
 
-# WorkFlow
+# Overview
 ![cI3ovFGG1F](https://user-images.githubusercontent.com/60803643/214389853-fea9a14c-b506-4cb8-84d2-09f2e7cb8acf.gif)
 
 
@@ -30,11 +30,6 @@ Node, express, JWT, bcryptjs, mongoose, mongodb
 5. Create Frontend
 6. Make Connection between Frontend and Backend
 6. Deployment on frontend on netlify and backend server on render 
-
-
-# Overview
-
-
 
 
 
