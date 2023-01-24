@@ -1,9 +1,13 @@
 # Access Product Click Here: 
-## Frontend: 
-## Backend: 
+## Frontend Deployment: 
+## Backend Deployment: 
 
 # Wealth-Management-App
 This is a Full Stack MERN Project With user register, login by using jwt, email notifications, CURD operations With Standard API, etc.
+
+# Demo Account Credentials or you can try with new account
+- Email: demo@gmail.com
+- Password: Demo@9090
 
 # Tech Used
 ## Frontend
@@ -22,6 +26,12 @@ Node, express, JWT, bcryptjs, mongoose, mongodb
 5. Create Frontend
 6. Make Connection between Frontend and Backend
 6. Deployment on frontend on netlify and backend server on render 
+
+
+# Overview
+
+
+
 
 
 # Basic Work Flow Of Product 
@@ -67,7 +77,7 @@ https://www.figma.com/proto/ZyZZONgZWRm7PUVSG58vMJ/wealth-management?page-id=0%3
 ![wealth-management-db](https://user-images.githubusercontent.com/60803643/209372203-3115d15a-76fe-478e-a133-3adee6ba2d47.jpg)
 
 
-# Helpfull Resources I follwed while creating this project
+# Helpfull Resources I follwed while building this project
 1. Implement Authentication and Protect Routes in React: 
 https://levelup.gitconnected.com/implement-authentication-and-protect-routes-in-react-135a60b1e16f
 
@@ -87,3 +97,5 @@ https://www.freecodecamp.org/news/how-to-use-redux-in-reactjs-with-real-life-exa
 5. React api call traverse data
 https://www.pluralsight.com/guides/iterate-through-a-json-response-in-jsx-render-for-reactjs
 
+# Contributors
+- Pradip Bedre

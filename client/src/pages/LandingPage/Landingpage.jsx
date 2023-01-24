@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HiMenu } from "react-icons/Hi";
 import "./landingPage.scss";
 import hero from "../../Assets/hero.png";
@@ -9,29 +9,45 @@ import extraMultipalUser from "../../Assets/extramul.png";
 
 import { Link, Route } from "react-router-dom";
 const Landingpage = () => {
+  const [isChecked, setIsChecked] = useState(false);
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <>
       <div className="main">
         <nav>
           <div className="logo">WealthUp</div>
-          <input type="checkbox" id="menu" />
+          <input
+            type="checkbox"
+            id="menu"
+            checked={isChecked}
+            onChange={handleCheckboxChange}
+          />
           <label htmlFor="menu" className="menu-btn">
             <HiMenu className="menu-btn" />
           </label>
           <ul>
             <li>
-              <a href="#hero" className="active">
+              <a href="#hero" onClick={handleCheckboxChange}>
                 Home
               </a>
             </li>
             <li>
-              <a href="#whywe">WhyWe</a>
+              <a href="#whywe" onClick={handleCheckboxChange}>
+                WhyWe
+              </a>
             </li>
             <li>
-              <a href="#pricing">Pricing</a>
+              <a href="#pricing" onClick={handleCheckboxChange}>
+                Pricing
+              </a>
             </li>
             <li>
-              <a href="#testimonials">Testimonial</a>
+              <a href="#testimonials" onClick={handleCheckboxChange}>
+                Testimonial
+              </a>
             </li>
             <li>
               <Link to="/signin">
@@ -71,12 +87,12 @@ const Landingpage = () => {
                 client requirement and financial goals.
               </li>
               <li>
-                Wealth management services help investors calculatedly and
-                systematically create their corpus.
+                Once you're aware of how much you're spending, an Expense
+                manager lets you build upon a clear monthly budget.
               </li>
               <li>
-                Wealth managers come armed with t skills that help them
-                understand client requirement and.
+                Request for a customized report of your spending & expenses and
+                keep a close eye on your everyday money.
               </li>
             </ul>
           </div>
@@ -137,35 +153,31 @@ const Landingpage = () => {
 
           <div className="slide-container">
             <div className="slide">
-              <h3>Pradip Bedre</h3>
+              <h3>Jhon Doe</h3>
               <p>
-                " Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Deserunt ratione dolorem totam optio asperiores tempora atque
-                architecto, aperiam facilis qui."
+                " Best Wealth management app which will help you to track fixed
+                Assets expenses and income sources it is good."
               </p>
             </div>
             <div className="slide">
               <h3>Pradip Bedre</h3>
               <p>
-                " Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Deserunt ratione dolorem totam optio asperiores tempora atque
-                architecto, aperiam facilis qui."
+                " he goal of wealth management is to help you achieve financial
+                security and grow and protect your wealth."
               </p>
             </div>
             <div className="slide">
-              <h3>Pradip Bedre</h3>
+              <h3>Sachin Jaha</h3>
               <p>
-                " Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Deserunt ratione dolorem totam optio asperiores tempora atque
-                architecto, aperiam facilis qui."
+                " Because of this app i am able to track all expenses so it is
+                good to manage the expenses and income so use WealthUp"
               </p>
             </div>
             <div className="slide">
-              <h3>Pradip Bedre</h3>
+              <h3>Sandeep More</h3>
               <p>
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Deserunt ratione dolorem totam optio asperiores tempora atque
-                architecto, aperiam facilis qui"
+                "Too good app i am happy with is it manage wealth and gives us
+                income expense breakdown best all ever seen"
               </p>
             </div>
           </div>

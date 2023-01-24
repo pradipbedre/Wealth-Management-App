@@ -18,9 +18,12 @@
       color: white;
       padding: 0.4rem 1rem;
       border: none;
-      border-radius: 0.2rem;
       font-size: 1.1rem;
+      text-decoration: none;
       font-weight: 700;
+      &:hover {
+        color: white;
+      }
     }
     .menu-btn {
       font-size: 30px;
@@ -47,8 +50,7 @@
           font-weight: 700;
           transition: all 0.2s ease;
           &:hover {
-            background-color: #28ac7d;
-            color: white;
+            color: #28ac7d;
           }
         }
       }
