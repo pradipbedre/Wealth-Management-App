@@ -1,5 +1,4 @@
 import React from "react";
-import { FcGoogle } from "react-icons/Fc";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";

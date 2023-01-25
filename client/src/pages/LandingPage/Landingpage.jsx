@@ -6,7 +6,6 @@ import whywe from "../../Assets/whywe.png";
 import singleUser from "../../Assets/single.png";
 import multipalUser from "../../Assets/multipal.png";
 import extraMultipalUser from "../../Assets/extramul.png";
-
 import { Link, Route } from "react-router-dom";
 const Landingpage = () => {
   const [isChecked, setIsChecked] = useState(false);
