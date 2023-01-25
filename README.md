@@ -1,6 +1,6 @@
 # Access Product Click Here: 
-## Frontend Deployment: 
-## Backend Deployment: 
+## Frontend Deployment: https://wealthup.netlify.app/
+## Backend Deployment: https://wealthup-backend.onrender.com/
 
 # Wealth-Management-App
 This is a Full Stack MERN Project With user register, login by using jwt, email notifications, CURD operations With Standard API, etc.
