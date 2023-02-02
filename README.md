@@ -1,5 +1,4 @@
 # Access Product Click Here: 
-## Frontend Deployment: https://wealthup.netlify.app/
 ## Backend Deployment: https://wealthup-backend.onrender.com/
 
 # Wealth-Management-App
