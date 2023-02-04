@@ -12,7 +12,8 @@ This is a Full Stack MERN Project With user register, login by using jwt, email 
 ![cI3ovFGG1F](https://user-images.githubusercontent.com/60803643/214389853-fea9a14c-b506-4cb8-84d2-09f2e7cb8acf.gif)
 
 
-# Tech Used
+# Technology Stack
+ 
 ## Frontend
 Deployed on netlify.
 React, Sass or Scss, React Router Dom
